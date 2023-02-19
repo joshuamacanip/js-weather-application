@@ -1,0 +1,146 @@
+html {
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --clr-dominant: rgb(186, 93, 244);
+  --clr-secondary: rgb(136, 11, 214);
+  --clr-accent-1: rgb(228, 188, 253);
+  --clr-accent-2: rgb(197, 197, 197);
+  --clr-accent-3: rgb(237, 234, 234);
+  --clr-accent-4: rgb(101, 101, 101);
+  --clr-accent-5: rgb(83, 4, 133);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  line-height: 125%;
+  font-weight: 600;
+}
+
+body {
+  line-height: 150%;
+  font-weight: 400;
+  height: 100vh;
+
+  background-color: var(--clr-dominant);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form--input {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 4px;
+  border-bottom: 4px solid var(--clr-secondary);
+  background-color: var(--clr-accent-2);
+  transition: background 200ms ease-in-out, border 200ms ease-in-out;
+}
+
+.form--input:focus {
+  outline: none;
+  background-color: var(--clr-accent-3);
+  border-bottom: 4px solid var(--clr-accent-1);
+}
+
+.weather--card {
+  margin-top: 16px;
+  border-radius: 4px;
+  padding: 24px;
+  background-color: var(--clr-accent-3);
+  box-shadow: 2px 2px 2px 2px rgb(92, 3, 148);
+}
+
+.weather--card__content {
+  display: flex;
+  gap: 40px;
+}
+
+.weather--card__num {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.weather--main__temp,
+.weather--main__max,
+.weather--main__min,
+.weather--sub__data {
+  display: flex;
+  gap: 8px;
+}
+
+.weather--main__temp {
+  padding: 16px 0;
+}
+
+.weather--main__temp h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--clr-secondary);
+}
+
+.weather--sub__data {
+  gap: 16px;
+}
+
+.weather--main__max h4,
+.weather--main__min h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--clr-secondary);
+}
+
+.weather--city__name {
+  width: 280px;
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--clr-accent-5);
+}
+
+.weather--city__status {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--clr-accent-4);
+}
+
+.weather--status__img__container {
+  display: flex;
+  margin-top: 16px;
+}
+
+.weather--img__logo {
+  padding: 2px;
+  border-radius: 4px;
+  background-color: var(--clr-accent-2);
+}
+
+.fa-solid {
+  color: var(--clr-dominant);
+}
+
+.hide--form {
+  display: none;
+}
